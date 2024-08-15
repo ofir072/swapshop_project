@@ -1,0 +1,60 @@
+{% extends "my_trades.html" %}
+
+{% block title %}View Trade - SwapShop{% endblock %}
+
+{% block head %}
+{{super()}}
+    <link rel="stylesheet" href="{{ url_for('view_trade_bp.static', filename='view_trade.css') }}">
+{% endblock %}
+
+{% block content %}
+    <nav>
+        <div>
+            <section class="profile-section">
+                <div class="profile-info">
+                    <a href="../home">מסך הבית</a>
+                    <a href="../my_items">הפריטים שלי</a>
+                    <a href="../add_item">הוספת פריט</a>
+                    <a href="../my_trades">העסקאות שלי</a>
+                </div>
+            </section>
+        </div>
+        <img src="{{ url_for('static', filename='png/navi_image.png') }}" alt="Navigation Image" class="navi-image">
+    </nav>
+    <main id="view-main">
+        <div class="trade-grid">
+            <!-- Trade rows will be populated here by JavaScript -->
+        </div>
+        <div class="messages-container">
+            <h3>צ'אט</h3>
+            <div class="messages-list">
+                <!-- Messages will be populated here by JavaScript -->
+            </div>
+            <div class="message-input-container">
+                <label for="message-input"></label><input type="text" id="message-input" placeholder="הכנס הודעה">
+                <button id="send-message">שלח</button>
+            </div>
+        </div>
+        <div class="status-update-container">
+            <h3>עדכון סטאטוס</h3>
+            <div class="status-buttons">
+                <button id="confirm-button">אישור</button>
+                <button id="cancel-button">ביטול</button>
+            </div>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+        </div>
+        <img src="../static/png/confirm.png" alt="Confirm Image" class="confirm-image disabled" id="confirm-image">
+    </main>
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+    <script src="{{ url_for('view_trade_bp.static', filename='view_trade.js') }}"></script>
+{% endblock %}
+

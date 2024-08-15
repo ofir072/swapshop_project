@@ -1,0 +1,108 @@
+/* Main Section Styles for Home Page */
+main {
+    margin-right: 170px; /* Adjust this value based on nav width */
+    margin-left: 110px; /* Add margin on the left to clear the navigation container */
+    padding: 20px;
+    padding-top: 80px; /* Add space for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px); /* Ensure the main section covers the full height minus header */
+    background-color: #C6B6A3; /* Light brownish hue for a warm, homely feel */
+}
+
+#home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.profile-section {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.items-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.item-card {
+    background-color: #EDE0CE;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio for square */
+    position: relative;
+    cursor: pointer; /* Indicate that the card is clickable */
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.item-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+/* Indicate selected card */
+.item-card.selected {
+    border: 2px solid #000; /* Change border color to indicate selection */
+}
+
+/* Disabled add button */
+.add-image.disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent clicking on the disabled button */
+}
+
+#filter-modal label[for="location"],
+#filter-modal input#location,
+#filter-modal label[for="rating"],
+#filter-modal input#rating {
+    display: none;
+}
+
+/* Add Button Styles */
+.add_item_image {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+.disable-clicks {
+    pointer-events: none;
+}

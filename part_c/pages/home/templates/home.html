@@ -1,0 +1,15 @@
+{% extends "filter.html" %}
+
+{% block title %}Home - SwapShop{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('home_bp.static', filename='home.css') }}">
+{% endblock %}
+
+{% block content %}
+    {{super()}}
+    <section class="items-section" id="items-section">
+        <!-- Items will be dynamically populated here -->
+    </section>
+    <img src="{{ url_for('static', filename='png/add.png') }}" alt="Add Image" class="add-image disabled" id="add-image">
+{% endblock %}

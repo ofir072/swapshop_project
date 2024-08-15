@@ -1,0 +1,179 @@
+/* Main Section Styles for Add Item Page */
+main {
+    margin-right: 170px; /* Adjust this value based on nav width */
+    margin-left: 110px; /* Add margin on the left to clear the navigation container */
+    padding: 20px;
+    padding-top: 80px; /* Add space for fixed header */
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Align items to the left */
+    min-height: calc(100vh - 90px); /* Ensure the main section covers the full height minus header */
+    background-color: #C6B6A3; /* Light brownish hue for a warm, homely feel */
+}
+
+#selected-item-container {
+    width: 30%; /* Adjust width for the selected item card */
+    margin-right: 30px; /* Add some space to the right of the selected item */
+    position: fixed; /* Make it fixed */
+    top: 80px; /* Adjust this value as needed to position it below the header */
+    left: 100px; /* Adjust the value to position it correctly */
+}
+
+#selected-item-container .item-card {
+    background-color: #EDE0CE;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    height: auto; /* Adjusted */
+    padding-bottom: 100%; /* Maintain aspect ratio for square */
+    position: relative;
+    cursor: pointer; /* Indicate that the card is clickable */
+}
+
+#selected-item-container .item-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+#selected-item-container .item-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.items-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 15px;
+    justify-content: flex-start; /* Align items to the left */
+    width: 70%; /* Adjust width for the item cards section */
+    margin-left: 300px; /* Add space to the left to clear the fixed selected item container */
+}
+
+.item-card {
+    background-color: #EDE0CE;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio for square */
+    position: relative;
+    cursor: pointer; /* Indicate that the card is clickable */
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.item-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+/* Indicate selected card */
+.item-card.selected {
+    border: 2px solid #000; /* Change border color to indicate selection */
+}
+
+/* No click appearance for selected item card */
+.selected-item-card {
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #000; /* Change border color to indicate selection */
+}
+
+/* Disabled add button */
+.add-image.disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent clicking on the disabled button */
+}
+
+#item-details-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+#item-details-modal .modal-content {
+    background-color: #EDE0CE; /* Light beige background for the form section */
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Adjust modal width */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+    text-align: right; /* Align text to the right */
+    position: absolute;
+    top: 40%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+}
+
+#item-details-modal .modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Trade Animation Styles */
+.trade-animation-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.trade-animation-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+    animation: tradeAnimation 2s ease-in-out; /* Apply animation */
+}
+
+@keyframes tradeAnimation {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}

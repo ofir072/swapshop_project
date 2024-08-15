@@ -1,0 +1,161 @@
+/* view_trade.css */
+#view-main {
+    margin-right: 150px; /* Adjust based on nav width */
+    margin-left: 140px; /* Adjust based on nav width */
+    margin-top: 20px; /* Adjust based on header height */
+}
+
+/* Styles for the messages container */
+.messages-container {
+    position: absolute;
+    right: 170px;
+    width: 332.5px;
+    top: 320px;
+    background-color: #EDE0CE; /* Updated background color to match the style */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.messages-container h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 150px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.message.me {
+    background-color: #A4C0B3; /* User message background color */
+    color: #333;
+    text-align: right;
+}
+
+.message.other {
+    background-color: #D3D3D3; /* Other user's message background color */
+    color: #333;
+    text-align: left;
+}
+
+
+.message-input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#send-message {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#send-message:hover {
+    background-color: #3a3a5a;
+}
+
+/* Styles for the status update and rating container */
+.status-update-container {
+    position: absolute;
+    top: 320px;
+    right: 519.5px; /* Position to the left of messages container */
+    width: 332.5px;
+    background-color: #EDE0CE;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.status-update-container h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.status-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+.status-buttons button {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.status-buttons button:hover {
+    background-color: #3a3a5a;
+}
+
+.status-buttons button.confirmed {
+    background-color: #00a800; /* Soft green */
+}
+
+.status-buttons button.canceled {
+    background-color: #e00000; /* Soft red */
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc; /* Empty star color */
+}
+
+.star.filled {
+    color: #FFD700; /* Filled star color */
+}
+.confirm-image {
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.confirm-image.disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent clicking on the disabled button */
+}
+
+.confirm-image.enabled {
+    opacity: 1;
+    pointer-events: auto;
+}

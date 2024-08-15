@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapShop - דף נחיתה</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <img src="../png/logo.png" alt="SwapShop Logo" class="logo">
+        <a href="#" id="about-link">
+            <img src="../png/info.png" alt="About Us Icon" class="about-icon">
+        </a>
+    </header>
+    <nav>
+        <img src="../png/navi_image.png" alt="Navigation Image" class="navi-image">
+    </nav>
+    <main>
+        <section id="signup">
+            <form id="signup-form">
+                <label for="first-name">שם פרטי:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">שם משפחה:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="address">כתובת:</label>
+                <input type="text" id="address" name="address" required>
+                <button type="submit">כניסה</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>מי אנחנו?</h2>
+            <p>SwapShop היא אפליקציה המיועדת למסחר חליפין של בגדי יד שנייה, צמחים ודברי אומנות בקהילה המקומית. מטרת האפליקציה היא לעודד שימוש חוזר במשאבים ולתמוך בקיימות סביבתית באמצעות יצירת פלטפורמה המאפשרת למשתמשים להחליף פריטים באופן ישיר.</p>
+        </div>
+    </div>
+
+    <script src="../global/global.js"></script>
+    <script src="../index/index.js"></script>
+</body>
+</html>

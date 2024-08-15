@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Add Item - SwapShop{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('add_item_bp.static', filename='add_item.css') }}">
+{% endblock %}
+
+{% block content %}
+{{super()}}
+    <div class="container" id="form-container">
+        <h2>הוסף פריט חדש</h2>
+        <label for="category">קטגוריה:</label>
+        <select id="category">
+            <option value="אומנות">אומנות</option>
+            <option value="עציצים">עציצים</option>
+            <option value="בגדים">בגדים</option>
+        </select>
+        <label for="description">תיאור:</label>
+        <textarea id="description" rows="4" cols="50"></textarea>
+    </div>
+    <div class="container" id="image-container">
+        <h2>העלה תמונה</h2>
+        <input type="file" id="image-upload" accept="image/*">
+        <div id="image-preview"></div>
+    </div>
+    <img src="../static/png/add.png" alt="Add Item Image" class="add_item_image" id="add_item_image">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('add_item_bp.static', filename='add_item.js') }}"></script>
+{% endblock %}
+

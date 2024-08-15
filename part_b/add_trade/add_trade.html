@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapShop - הוספת עסקה</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="add_trade.css">
+</head>
+<body>
+    <header>
+        <img src="../png/logo.png" alt="SwapShop Logo" class="logo">
+        <a href="#" id="about-link">
+            <img src="../png/info.png" alt="About Us Icon" class="about-icon">
+        </a>
+        <img src="../png/back.png" alt="Back Button" class="back-button" id="back-button">
+    </header>
+    <nav>
+        <div>
+            <section class="profile-section">
+                <div class="profile-info">
+                    <a href="../home/home.html">מסך הבית</a>
+                    <a href="../my_items/my_items.html">הפריטים שלי</a>
+                    <a href="../add_item/add_item.html">הוספת פריט</a>
+                    <a href="../my_trades/my_trades.html">העסקאות שלי</a>
+                </div>
+            </section>
+        </div>
+        <img src="../png/navi_image.png" alt="Navigation Image" class="navi-image">
+    </nav>
+    <main id="home-main">
+        <div id="selected-item-container">
+            <!-- Selected item card will be displayed here -->
+        </div>
+        <section class="items-section" id="items-section">
+            <!-- Items will be dynamically populated here -->
+        </section>
+        <img src="../png/add.png" alt="Add Image" class="add-image disabled" id="add-image">
+    </main>
+
+    <!-- About Us Modal Section -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>מי אנחנו?</h2>
+            <p>SwapShop היא אפליקציה המיועדת למסחר חליפין של בגדי יד שנייה, צמחים ודברי אומנות בקהילה המקומית. מטרת האפליקציה היא לעודד שימוש חוזר במשאבים ולתמוך בקיימות סביבתית באמצעות יצירת פלטפורמה המאפשרת למשתמשים להחליף פריטים באופן ישיר.</p>
+        </div>
+    </div>
+
+    <!-- Item Details Modal Section -->
+    <div id="item-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="item-details-close-button">&times;</span>
+            <h2>פרטים על הפריט הנבחר</h2>
+            <div id="modal-item-details">
+                <!-- Item details will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Trade Animation Container -->
+    <div id="trade-animation-container" class="trade-animation-container">
+        <div class="trade-animation-content">
+            <h2>עסקה נוצרה</h2>
+        </div>
+    </div>
+
+    <script src="../global/global.js"></script>
+    <script src="add_trade.js"></script>
+</body>
+</html>

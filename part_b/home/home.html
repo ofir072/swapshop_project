@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapShop - מסך הבית</title>
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <img src="../png/logo.png" alt="SwapShop Logo" class="logo">
+        <a href="#" id="about-link">
+            <img src="../png/info.png" alt="About Us Icon" class="about-icon">
+        </a>
+        <img src="../png/back.png" alt="Back Button" class="back-button" id="back-button">
+        <img src="../png/filter.png" alt="Filter Button" class="filter-button" id="filter-button">
+    </header>
+    <nav>
+        <div>
+            <section class="profile-section">
+                <div class="profile-info">
+                <a href="/home.html"><strong>מסך הבית</strong></a>
+                <a href="../my_items/my_items.html">הפריטים שלי</a>
+                <a href="../add_item/add_item.html">הוספת פריט</a>
+                <a href="../my_trades/my_trades.html">העסקאות שלי</a>
+                </div>
+            </section>
+        </div>
+        <img src="../png/navi_image.png" alt="Navigation Image" class="navi-image">
+    </nav>
+    <main id="home-main">
+        <section class="items-section" id="items-section">
+            <!-- Items will be dynamically populated here -->
+        </section>
+        <img src="../png/add.png" alt="Add Image" class="add-image disabled" id="add-image">
+    </main>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>מי אנחנו?</h2>
+            <p>SwapShop היא אפליקציה המיועדת למסחר חליפין של בגדי יד שנייה, צמחים ודברי אומנות בקהילה המקומית. מטרת האפליקציה היא לעודד שימוש חוזר במשאבים ולתמוך בקיימות סביבתית באמצעות יצירת פלטפורמה המאפשרת למשתמשים להחליף פריטים באופן ישיר.</p>
+        </div>
+    </div>
+
+    <!-- Filter Modal Section -->
+    <div id="filter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>סינון פריטים</h2>
+            <label for="category">קטגוריה:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="אומנות">אומנות</option>
+                <option value="עציצים">עציצים</option>
+                <option value="בגדים">בגדים</option>
+            </select>
+            <label for="location">מיקום:</label>
+            <input type="text" id="location">
+            <label for="rating">דירוג מינימלי:</label>
+            <input type="number" id="rating" step="0.1" min="0" max="5">
+            <button id="apply-filter">החל סינון</button>
+        </div>
+    </div>
+
+
+    <script src="../global/global.js"></script>
+    <script src="home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* Main Section Styles for Add Item Page */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 65px; /* Adjusted for fixed header */
+    margin-right: 170px; /* Adjust for nav width to prevent overlap */
+    margin-left: 90px; /* Adjust left margin */
+    gap: 20px; /* Reduce the gap between containers to 20px */
+}
+
+.container {
+    width: calc(50% - 10px); /* Adjust width to fit within the available space */
+    background-color: #EDE0CE;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select, textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #F4F4F4;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#image-preview {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#image-preview img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add Button Styles */
+.add_item_image {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+.add_item_image.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

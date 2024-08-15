@@ -1,0 +1,54 @@
+/* Main Section Styles for Index Page */
+main {
+    margin-right: 70px; /* Adjust this value based on nav width */
+    padding: 20px;
+    padding-top: 80px; /* Add space for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px); /* Ensure the main section covers the full height minus header */
+    background-color: #C6B6A3; /* Light brownish hue for a warm, homely feel */
+}
+
+#signup {
+    background-color: #EDE0CE; /* Light beige background for the form section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px; /* Adjusted width */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 20px); /* Adjusted width to fit container */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3a3a5a;
+}

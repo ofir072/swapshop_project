@@ -1,0 +1,59 @@
+/* Adjust the main section to avoid overlap with the navigation */
+#home-main {
+    margin-right: 150px; /* Adjust based on nav width */
+    margin-left: 10px; /* Adjust based on nav width */
+    margin-top: 20px; /* Adjust based on header height */
+}
+
+.trade-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Updated to include the arrow column */
+    gap: 16px;
+    padding: 20px;
+    margin-top: 70px; /* Adjust based on header height */
+}
+
+.trade-grid .trade-row {
+    display: contents;
+}
+
+.trade-grid .trade-cell {
+    background-color: #EDE0CE;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.trade-grid .trade-cell img {
+    max-width: 80%; /* Adjust to fit within the square */
+    height: auto;
+    border-radius: 4px;
+}
+
+.trade-grid .trade-cell p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.trade-grid .trade-cell strong {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Specific styles for data cells to make them square */
+.trade-grid .trade-row .trade-cell:not(.header-cell) {
+    aspect-ratio: 1 / 1; /* Makes the cell a square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the arrow icon cell */
+.trade-grid .trade-cell a img {
+    max-width: 30px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+}

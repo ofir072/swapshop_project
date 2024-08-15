@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SwapShop{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global/global.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='png/logo.png') }}" alt="SwapShop Logo" class="logo">
+        <a href="#" id="about-link">
+            <img src="{{ url_for('static', filename='png/info.png') }}" alt="About Us Icon" class="about-icon">
+        </a>
+        {% block header %}{% endblock %}
+    </header>
+    <nav>
+        <img src="{{ url_for('static', filename='png/navi_image.png') }}" alt="Navigation Image" class="navi-image">
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>מי אנחנו?</h2>
+            <p>SwapShop היא אפליקציה המיועדת למסחר חליפין של בגדי יד שנייה, צמחים ודברי אומנות בקהילה המקומית. מטרת האפליקציה היא לעודד שימוש חוזר במשאבים ולתמוך בקיימות סביבתית באמצעות יצירת פלטפורמה המאפשרת למשתמשים להחליף פריטים באופן ישיר.</p>
+        </div>
+    </div>
+
+    {% block modal_block %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='global/global.js') }}"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

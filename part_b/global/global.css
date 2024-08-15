@@ -1,0 +1,330 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #C6B6A3; /* Light brownish hue for a warm, homely feel */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    direction: rtl; /* Set text direction to right-to-left */
+}
+
+/* Header Styles */
+header {
+    background-color: #A4C0B3; /* Light green for header background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Increased height for larger logo */
+    z-index: 1000;
+}
+
+header .logo {
+    margin-right: 70px; /* Adjust this value based on nav width */
+    height: 40px; /* Adjusted logo size */
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header span {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 50px; /* Adjust this value based on header height */
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    background-color: #A4C0B3; /* Same color as header for consistency */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.75; /* This sets the transparency to 50% */
+}
+
+nav a {
+    display: block;
+    color: #333;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.profile-info a strong {
+    font-weight: bold;
+}
+
+.navi-image {
+    width: 100%;
+    height: 70px; /* Adjusted navigation image size */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    margin-top: auto;
+}
+
+/* About Icon Styles */
+.about-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Adjust modal width */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Back Button Styles */
+.back-button {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    cursor: pointer;
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+/* Add Button Styles */
+.add-image {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+/* General Card Styles */
+.item-card {
+    background-color: #EDE0CE;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio for square */
+    position: relative;
+    cursor: pointer; /* Indicate that the card is clickable */
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.item-card p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+/* Add to your global.css or home.css */
+.item-card p.item-rating {
+    color: #333; /* Ensure the text color contrasts with the background */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(237, 224, 206, 0.8); /* Match the card color with transparency */
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Indicate selected card */
+.item-card.selected {
+    border: 2px solid #000; /* Change border color to indicate selection */
+}
+
+/* Disabled add button */
+.add-image.disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent clicking on the disabled button */
+}
+/* Filter Button Styles */
+.filter-button {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    position: absolute;
+    top: 80px; /* Position below the header */
+    left: 30px;
+    cursor: pointer;
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+/* Filter Modal Styles */
+#filter-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+#filter-modal .modal-content {
+    background-color: #EDE0CE; /* Light beige background for the form section */
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Adjust modal width */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+    text-align: right; /* Align text to the right */
+    position: absolute;
+    top: 40%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+}
+
+#filter-modal .modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+#filter-modal .modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+#filter-modal .modal-content select,
+#filter-modal .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#filter-modal .modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensure block display to center align */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center text inside the button */
+}
+
+
+#filter-modal .modal-content button:hover {
+    background-color: #3a3a5a;
+}
+
+#filter-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#filter-modal .close-button:hover,
+#filter-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

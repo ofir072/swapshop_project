@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}My Trades - SwapShop{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('my_trades_bp.static', filename='my_trades.css') }}">
+{% endblock %}
+
+{% block content %}
+{{super()}}
+    <main id="home-main">
+        <div class="trade-grid">
+            <!-- Trade rows will be populated here by JavaScript -->
+        </div>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('my_trades_bp.static', filename='my_trades.js') }}"></script>
+{% endblock %}
+
